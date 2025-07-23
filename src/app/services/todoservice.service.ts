@@ -11,7 +11,7 @@ import { UpdateTodoDto } from '../dto/updateTodo.dto';
 export class TodoService {
 
   constructor(private http : HttpClient) { }
-  private apiUrl = "http://localhost:3000/todo"
+  private apiUrl = "https://todo-app-angular-nest-mongodb.onrender.com/todo"
 
   getTodos() : Observable<Todo[]> {
     return this.http.get<Todo[]>(this.apiUrl);
