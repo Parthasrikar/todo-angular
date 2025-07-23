@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    padding: 1vw;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 3vw 1vw 0vw;
+    width: 100%;
+    border-bottom: 1px solid #000a52;
+    margin-bottom: 1vw;
+
+    .forminput {
+        display: flex;
+        gap: 3vw;
+
+        input {
+            padding: 0.7vw 1.2vw;
+            border: none;
+            border: 1px solid #666;
+            border-radius: 0.5vw;
+            font-size: 1vw;
+            width: 20vw;
+        }
+
+
+
+    }
+}
+
+button {
+    padding: 0.5vw 1vw;
+    border-radius: 0.5vw;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1.1vw;
+    background-color: #8da8f9;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #000a52;
+    color: white;
+    transition: all 0.5s;
+
+}
+
+h1 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1vw;
+    color: #000a52;
+}
+
+.todocontainer {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    gap: 2.3vw;
+    padding: 1vw;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.todo {
+    width: 30vw;
+    border: 1px solid #666;
+    height: 15vw;
+    padding: 1vw 1.5vw;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    box-shadow: 10px 10px;
+    position: relative;
+
+    h2 {
+        font-size: 2.5vw;
+    }
+    p {
+        font-size: 1.5vw;
+        color: #240606;
+    }
+    .content {
+        overflow-y: scroll;
+    }
+    .done {
+        display: flex;
+        align-items: center;
+        gap: 0.3vw;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
+
+.todocontrols {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .forminput {
+        display: flex;
+        gap: 1vw;
+    }
+}
+
+.complete {
+    background-color: #666;
+    color: #3f3f3f;
+    p {
+        color: #3f3f3f;
+    }
+    button {
+        color: #3f3f3f;
+        background-color: #1f1f1f;
+    }
+}

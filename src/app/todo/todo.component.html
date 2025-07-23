@@ -1,0 +1,44 @@
+<div class="container">
+
+    <div class="controls">
+        <h1>todos</h1>
+
+        <div class="forminput">
+            <input [(ngModel)]="todo.title" placeholder="Title" required />
+            <input [(ngModel)]="todo.content" placeholder="Content" required />
+
+            <button *ngIf="post" (click)="posttodo()" type="submit">
+                create post
+            </button>
+
+            <button *ngIf="!post" (click)="updatetodo()" type="submit">
+                edit post
+            </button>
+        </div>
+    </div>
+
+    <div class="todocontainer">
+        <div class="todo" [ngClass]="{complete : todo.done}" *ngFor="let todo of AllTodos;">
+            <div class="todocontrols">
+                <h2>{{todo.title}}</h2>
+
+                <div class="forminput">
+                    <button (click)="changetoedit(todo._id)" >edit</button>
+                    <button (click)="deletetodo(todo._id)" >delete</button>
+                </div>
+            </div>
+            <div class="content">
+               <p>{{todo.content}}</p> 
+               <p>{{todo.done}}</p>
+               <div class="done">
+                <button *ngIf="todo.done" (click)="done(todo._id, todo.done)" >NOT DONE</button>
+                <button *ngIf="!todo.done" (click)="done(todo._id, todo.done)" >DONE</button>
+               </div>
+
+
+               
+            </div>
+            
+        </div>
+    </div>
+</div>
